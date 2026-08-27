@@ -1,0 +1,30 @@
+name: Atualizar Dados da API
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' 
+  workflow_dispatch: 
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar ambiente Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Executar script de atualização
+        run: python atualizar.py
+
+      - name: Salvar alterações automaticamente
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Atualização automática dos dados da API'
+          file_pattern: 'Opa.json'
+          
