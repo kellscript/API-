@@ -1,5 +1,13 @@
 {
-  "status": "online",
-  "mensagem": "Minha API no GitHub está funcionando!",
-  "itens": ["item 1", "item 2", "item 3"]
+    "status": "online",
+    "youtube": {
+        "canal": "Seu Canal",
+        "inscritos": "1.2k",
+        "ultimo_video": "Atualizado em: 27/08/2026 às 14:40"
+    },
+    "tiktok": {
+        "perfil": "@seuusuario",
+        "seguidores": "5.4k",
+        "ultimo_video": "Novo desafio postado hoje"
+    }
 }
