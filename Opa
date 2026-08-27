@@ -1,0 +1,5 @@
+{
+  "status": "online",
+  "mensagem": "Minha API no GitHub está funcionando!",
+  "itens": ["item 1", "item 2", "item 3"]
+}
